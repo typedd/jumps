@@ -1,0 +1,23 @@
+{
+  "name": "jumps",
+  "version": "1.0.0",
+  "description": "",
+  "main": "1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/typedd/jumps.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/typedd/jumps/issues"
+  },
+  "homepage": "https://github.com/typedd/jumps#readme",
+  "devDependencies": {
+    "flow-bin": "^0.140.0"
+  }
+}
