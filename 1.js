@@ -1,4 +1,4 @@
-
+// @flow
 
 function avoidObstacles(obstacles) {
     //  write code here.
