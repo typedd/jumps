@@ -1,22 +1,28 @@
+
+
 function avoidObstacles(obstacles) {
     //  write code here.
-    lastObstacleCoord = Math.max(...obstacles)
+    const lastObstacleCoord = Math.max(...obstacles)
     for (let jumpLength = 1; jumpLength < lastObstacleCoord; jumpLength++) {
         function makeJumps(jumpLength, lastObstacleCoord) {
-            let arr = []
+            const arr = []
             for (let i=0; i < lastObstacleCoord; i++) {
                 arr.push(jumpLength + jumpLength*i)
             }
             return arr
         };
         const jumps = makeJumps(jumpLength, lastObstacleCoord)
-        console.log(jumps)
         
-        let isObstacle = obstacles.includes(jumps[jumpLength-1]);
-        console.log(isObstacle)
-        if (jumps.every(!isObstacle)) {
+        const isNotObstacle = function (x) { return !obstacles.includes(x);}
+        if (jumps.every(isNotObstacle)) {
             return jumpLength;
         }
     }
-    return jumpLength;
+    return lastObstacleCoord + 1;
 }
+
+console.log(
+    avoidObstacles(
+        [2, 5, 6, 7, 8, 10, 11, 12, 13, 6, 9]
+    )
+)
